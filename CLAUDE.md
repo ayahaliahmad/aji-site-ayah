@@ -18,5 +18,6 @@ Keep every future change in this style. It's a quiet, minimal portfolio look, in
 - **Big name:** "Ayah Ali-Ahmad" in Instrument Serif, very large, spanning almost the full width of the page on one line, centred, under the top strip. It must never cause sideways scrolling.
 - **Sections:** each section is a row with a thin line above it. The section name sits on the left in a small rounded "pill" tag (thin grey border, grey 12px text). The content sits on the right, about 560px wide at most. On phones the label sits above the content.
 - **Clips:** a list. Each clip is a headline in Instrument Serif (about 30px, 24px on phones) linking to the story, with the outlet in a small pill tag and the date in light grey 12px text beside it, and a thin line between clips. The pattern is in a comment in the Clips section of index.html.
+- **Headshot:** my headshot (images/headshot.jpg) sits in the About row, in the left column under the About label, about 240px wide (200px on phones), with slightly rounded corners and no border or shadow. On phones it sits above the About text.
 - **Placeholders:** empty spots are a pill tag with a dashed border and light grey text, such as "[Clips coming soon]".
 - **Links:** same colour as the text, with a light grey underline that darkens on hover.
