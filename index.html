@@ -56,10 +56,10 @@
       white-space: nowrap;
     }
 
-    /* Top strip: three small columns */
+    /* Top strip: name on the left, contact on the right */
     .topbar {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 2fr;
       gap: 24px;
       padding: 40px var(--gutter) 0;
       font-size: 14px;
@@ -69,18 +69,33 @@
     .topbar .name { color: var(--ink); font-weight: 500; }
     .topbar .contact { text-align: right; }
 
-    /* Giant name across the full width */
+    /* Headline: name on the left, beat on the right */
+    .headline-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+      align-items: end;
+      margin: 0 var(--gutter);
+      padding: 72px 0 0;
+    }
     .bigname {
       margin: 0;
-      padding: 48px 0 0;
       font-family: var(--serif);
       font-weight: 400;
-      font-size: 17.5vw;
-      line-height: 0.9;
-      letter-spacing: -0.03em;
+      font-size: clamp(44px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.02em;
       color: var(--ink);
-      text-align: center;
       white-space: nowrap;
+    }
+    .headline-row .beat {
+      margin: 0;
+      max-width: 560px;
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.4vw, 30px);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--ink);
     }
 
     /* Content rows: label on the left, content on the right */
@@ -147,7 +162,8 @@
       :root { --gutter: 16px; }
       .topbar { grid-template-columns: 1fr; gap: 10px; padding-top: 24px; }
       .topbar .contact { text-align: left; }
-      .bigname { padding-top: 32px; font-size: 17vw; }
+      .headline-row { grid-template-columns: 1fr; gap: 12px; padding-top: 40px; }
+      .bigname { font-size: 48px; }
       .row { grid-template-columns: 1fr; gap: 14px; }
       .row:first-of-type { margin-top: 36px; }
       .headshot { max-width: 200px; }
@@ -159,10 +175,12 @@
   <header>
     <div class="topbar">
       <div class="name">Ayah Ali-Ahmad</div>
-      <div class="beat">Reporting fellow covering politics and policy, with a focus on ai policy and governance</div>
       <div class="contact">You can reach me at <a href="mailto:ayahaliahmad@washsun.com">ayahaliahmad@washsun.com</a> or on Signal at aaliahmad.11.</div>
     </div>
-    <h1 class="bigname">Ayah Ali-Ahmad</h1>
+    <div class="headline-row">
+      <h1 class="bigname">Ayah Ali-Ahmad</h1>
+      <p class="beat">Reporting fellow covering politics and policy, with a focus on ai policy and governance</p>
+    </div>
   </header>
 
   <main>
