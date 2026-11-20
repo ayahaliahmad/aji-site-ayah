@@ -4,90 +4,129 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ayah Ali-Ahmad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --text: #1a1a1a;
-      --muted: #5c5c5c;
-      --rule: #e2e2e2;
-      --accent: #1f4e79;
-      --placeholder-bg: #fff8e1;
-      --placeholder-border: #e0b84c;
+      --ink: #121212;
+      --muted: #555555;
+      --rule: #121212;
+      --hairline: #c9c9c9;
+      --paper: #ffffff;
+      --link: #121212;
+      --display: "Playfair Display", "Times New Roman", Times, serif;
+      --body: "Libre Caslon Text", Georgia, "Times New Roman", serif;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      padding: 56px 16px 72px;
-      font-family: Georgia, "Times New Roman", serif;
+      padding: 40px 16px 72px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
       font-size: 18px;
-      line-height: 1.6;
-      color: var(--text);
-      background: #ffffff;
+      line-height: 1.65;
     }
     main {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
     }
-    header {
-      padding-bottom: 28px;
+
+    /* Masthead */
+    .masthead {
+      text-align: center;
+      border-top: 4px solid var(--rule);
       border-bottom: 1px solid var(--rule);
+      padding: 22px 0 18px;
+      position: relative;
     }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 2.6rem;
-      font-weight: normal;
-      line-height: 1.15;
+    .masthead::before {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; top: 4px;
+      border-top: 1px solid var(--rule);
+    }
+    .masthead h1 {
+      margin: 0;
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(2.6rem, 9vw, 4.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
     }
     .beat {
       margin: 0;
-      font-size: 1.15rem;
-      color: var(--muted);
+      padding: 10px 0;
+      border-bottom: 3px double var(--rule);
+      text-align: center;
+      font-family: var(--body);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink);
     }
+
+    /* Sections */
     section {
-      padding: 32px 0;
-      border-bottom: 1px solid var(--rule);
+      padding: 36px 0 8px;
     }
     h2 {
-      margin: 0 0 14px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
+      margin: 0 0 18px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.2;
     }
+    p { margin: 0 0 1em; }
+
+    /* About: newspaper body copy */
+    .about p {
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+
     .placeholder {
-      margin: 0;
       padding: 14px 16px;
-      background: var(--placeholder-bg);
-      border: 1px dashed var(--placeholder-border);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 0.95rem;
-      color: #6b5200;
+      border: 1px dashed var(--hairline);
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Contact: styled like a tagline at the end of a story */
+    .contact p {
+      font-style: italic;
     }
     a {
-      color: var(--accent);
+      color: var(--link);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
       text-underline-offset: 3px;
     }
-    .contact p { margin: 0; }
-    footer {
-      padding-top: 24px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 0.85rem;
-      color: var(--muted);
+    a:hover { text-decoration-thickness: 2px; }
+
+    @media (max-width: 520px) {
+      body { font-size: 17px; padding-top: 24px; }
+      .about p { text-align: left; }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>Ayah Ali-Ahmad</h1>
+      <div class="masthead">
+        <h1>Ayah Ali-Ahmad</h1>
+      </div>
       <p class="beat">Reporting fellow covering politics and policy, with a focus on ai policy and governance</p>
     </header>
 
-    <section id="about">
+    <section id="about" class="about">
       <h2>About</h2>
-      <!-- ABOUT TEXT GOES HERE: waiting on Ayah's About text -->
-      <p class="placeholder">[About text coming soon]</p>
+      <p>Ayah covers politics and policy at The Washington Sun.</p>
+      <p>She previously worked at KQED in San Francisco, where she reported and voiced daily radio stories for the station’s newscasts and covered courts, labor and surveillance technology for the digital desk. Her reporting has aired nationally on NPR. She graduated from the University of California, Berkeley, with a degree in media studies.</p>
     </section>
 
     <section id="clips">
