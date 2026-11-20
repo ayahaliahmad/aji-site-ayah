@@ -10,14 +10,13 @@ This repository is a journalist's personal website. GitHub Pages publishes it fr
 
 ## Site style
 
-Keep every future change in this style. It's a quiet, minimal portfolio look, inspired by maelie.co and samfcheng.com.
+Keep every future change in this style. It takes its colour and layout cues from washingtonsun.com: a clean news-site look. Use my name as the masthead, never the Sun's name, logo or wordmark.
 
-- **Overall:** white background, near-black text, lots of white space, no colours, no shadows, no photos in the layout unless I ask. Thin light-grey lines (#e4e4e4) separate sections.
-- **Fonts:** two Google Fonts only. Instrument Serif (regular weight only) for my name and beat in the headline, and for clip headlines. Instrument Sans for everything else, at small sizes (12–16px) with slightly tight letter spacing.
-- **Top strip:** two small items: my name on the left, the contact line on the right (right-aligned). On phones they stack in one column.
-- **Headline:** under the top strip, "Ayah Ali-Ahmad" in Instrument Serif at a moderate size (about 64px, 48px on phones) on the left, with my beat to its right in Instrument Serif (about 30px, 22px on phones). They line up with the same left and right columns as the sections below, sharing a bottom edge. On phones the beat sits under my name. It must never cause sideways scrolling.
-- **Sections:** each section is a row with a thin line above it. The section name sits on the left in a small rounded "pill" tag (thin grey border, grey 12px text). The content sits on the right, about 560px wide at most. On phones the label sits above the content.
-- **Clips:** a list. Each clip is a headline in Instrument Serif (about 30px, 24px on phones) linking to the story, with the outlet in a small pill tag and the date in light grey 12px text beside it, and a thin line between clips. The pattern is in a comment in the Clips section of index.html.
-- **Headshot:** my headshot (images/headshot.jpg) sits in the About row, in the left column under the About label, cropped to a circle about 240px across (200px on phones), centred on my face, with no border or shadow. On phones it sits above the About text.
-- **Placeholders:** empty spots are a pill tag with a dashed border and light grey text, such as "[Clips coming soon]".
-- **Links:** same colour as the text, with a light grey underline that darkens on hover.
+- **Colours:** white background. Near-black text (#121318 for headlines, #1b1c1e for body). Grey (#51545a) for dates. Pure black (#000) for rules and label boxes. Light grey (#efefef) for thin dividers between items. One accent: yellow (#ffcf26), used sparingly, only for the Contact button and the underline when hovering over a clip headline.
+- **Fonts:** two Google Fonts only. Roboto Slab (800 weight) for my name in the masthead, my beat headline and the lead clip headline. Inter for everything else: body text 17–18px, clip headlines 19px semibold, labels and nav 12–13px bold.
+- **Masthead:** "Ayah Ali-Ahmad" centred in Roboto Slab, with a yellow pill "Contact" button on the right, then a thin black rule. Below it is a centred row of small section links (About, Clips, Contact) closed off by another thin black rule. On phones my name moves to the left.
+- **Section labels:** each section starts with its name in a small black box with white uppercase text, sitting on a thin black rule that runs across the column.
+- **Top area:** two columns split by a thin black vertical rule. The wide left column is About: my beat as a large Roboto Slab headline, then a light-grey divider, then my circular headshot (images/headshot.jpg, 200px, 180px on phones, centred on my face, no border or shadow) beside my About text. The narrow right column is Contact, with my contact line. On phones everything stacks: About, then Contact.
+- **Clips:** the newest clip is the lead, spanning the full width with a large Roboto Slab headline, closed off by a black rule. The rest sit in a grid: three columns on computers, two on tablets, one on phones. Columns are split by thin black vertical rules, with light-grey dividers between items. Each clip shows the outlet in small bold uppercase and the date in grey above the headline, which links to the story. The pattern is in a comment in the Clips section of index.html; the layout comes from CSS, so new clips need no extra markup.
+- **Placeholders:** empty spots are grey italic text in square brackets, such as "[Clips coming soon]".
+- **Links:** same colour as the surrounding text, underlined.
